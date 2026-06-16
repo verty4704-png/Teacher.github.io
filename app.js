@@ -1,0 +1,1 @@
+export function startExam(){return {questions:20};}

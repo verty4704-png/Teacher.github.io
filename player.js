@@ -1,0 +1,1 @@
+.dark{background:#1a1a2e;color:white}
