@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Teacher — учи английский</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="assets/logo.png" alt="Teacher" class="logo" id="logoImg">
+      <div class="player-info">
+        <span class="hearts" id="heartsDisplay">❤️❤️❤️❤️❤️</span>
+        <span id="xpDisplay">0 XP</span>
+        <div class="xp-bar"><div class="xp-fill" id="xpFill"></div></div>
+        <span class="level-badge" id="levelDisplay">Ур. 1</span>
+      </div>
+    </header>
+    <button class="toggle-theme" id="themeToggle">🌙</button>
+    <main>
+      <!-- Главный экран -->
+      <div id="homeScreen" class="screen active">
+        <h2>Выберите раздел</h2>
+        <button class="btn" id="goGrammar">📖 Grammar</button>
+        <button class="btn" id="goVocab">🔤 Vocabulary</button>
+        <div class="level-map-container">
+          <h3>🗺️ Карта уровней</h3>
+          <div id="levelMap"></div>
+        </div>
+      </div>
+      <!-- Уроки (категории) -->
+      <div id="lessonsScreen" class="screen">
+        <h2 id="lessonTitle"></h2>
+        <div id="lessonList"></div>
+        <button class="btn back-btn" id="backToHome">← На главную</button>
+      </div>
+      <!-- Упражнение -->
+      <div id="exerciseScreen" class="screen">
+        <div id="exerciseContent"></div>
+        <div id="exerciseFeedback"></div>
+        <button class="btn" id="nextExerciseBtn" style="display:none;">Далее</button>
+      </div>
+      <!-- Магазин -->
+      <div id="shopScreen" class="screen">
+        <h2>🛒 Магазин</h2>
+        <div id="shopItems"></div>
+      </div>
+      <!-- Профиль -->
+      <div id="profileScreen" class="screen">
+        <h2>👤 Профиль</h2>
+        <div id="profileInfo"></div>
+        <button class="btn" id="takeExam">🎓 Пройти экзамен</button>
+        <button class="btn" id="showCertBtn">📜 Показать сертификат</button>
+        <div id="certificateContainer"></div>
+      </div>
+    </main>
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-screen="home">🏠</button>
+      <button class="nav-btn" data-screen="lessons">📚</button>
+      <button class="nav-btn" data-screen="shop">🛒</button>
+      <button class="nav-btn" data-screen="profile">👤</button>
+    </nav>
+  </div>
+
+  <script src="js/player.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/lessons.js"></script>
+  <script src="js/achievements.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/exam.js"></script>
+  <script src="js/certificate.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
